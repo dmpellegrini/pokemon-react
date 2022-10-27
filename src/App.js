@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import Menu from './Menu.jsx'
+import Modal from './Modal.jsx'
+import Sprite from './Sprite.jsx'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <h1>Gotta Catch 'Em All</h1>
       </header>
+      <body>
+        <Menu/>
+      </body>
     </div>
   );
 }
