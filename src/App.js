@@ -1,6 +1,5 @@
 import Menu from './Menu.jsx'
 import Modal from './Modal.jsx'
-import Sprite from './Sprite.jsx'
 import './App.css';
 
 function App() {
@@ -9,9 +8,9 @@ function App() {
       <header>
         <h1>Gotta Catch 'Em All</h1>
       </header>
-      <body>
+      <div>
         <Menu/>
-      </body>
+      </div>
     </div>
   );
 }
