@@ -28,13 +28,17 @@ function Modal(props) {
   useEffect(() => {bioPokemon()},[pokeBio]) 
   return (
     <div className='Modal'>
+    <div id='ArtContainer'>
       <img id='OffArt' src={pokeBio.offArt} alt=''/>
+    </div>
       <div className='BioBox'>
-        <h1>Name: {pokeBio.name}</h1>
-        <h1>Pokedex #: {pokeBio.id}</h1>
-        <h1>Type: {pokeBio.type}</h1>
-        <h1>Habitat: {pokeBio.habitatName}</h1>
-        {/* <h1>Evolves From: {pokeBio.evolution}</h1> */}
+        <ul>
+          <li>Name: {pokeBio.name}</li>
+          <li>Pokedex #: {pokeBio.id}</li>
+          <li>Type: {pokeBio.type}</li>
+          <li>Habitat: {pokeBio.habitatName}</li>
+          {/* <h1>Evolves From: {pokeBio.evolution}</h1> */}
+        </ul>
       </div>
     </div>
   );
