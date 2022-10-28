@@ -10,6 +10,7 @@ function App() {
       </header>
       <div>
         <Menu/>
+        <Modal/>
       </div>
     </div>
   );

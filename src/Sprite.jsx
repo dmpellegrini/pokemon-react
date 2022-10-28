@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react'
 
 function Sprite(props) {
   const [ sprite, setSprite ] = useState('')
-  const pokedexNum = 1
   const url = `https://pokeapi.co/api/v2/pokemon/${props.pokedexNum}`
   const catchPokemon = async function () {
     const response = await axios(url)
