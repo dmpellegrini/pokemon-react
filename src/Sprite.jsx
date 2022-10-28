@@ -15,9 +15,7 @@ function Sprite(props) {
   useEffect(() => {catchPokemon()},[props.pokemon]) 
   
   return (
-    <button>
       <img src={sprite} alt=''/>
-    </button>
   );
 }
 

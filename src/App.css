@@ -1,0 +1,40 @@
+.Header {
+  display: flex;
+  justify-content: center;
+}
+
+.Menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  outline: solid red;
+}
+
+.Sprite {
+  outline: solid red;
+  /* margin: 5px; */
+}
+
+.Modal {
+  background-color: grey;
+  outline: solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.BioBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+  outline: solid red;
+  flex-shrink: 1;
+}
+
+#OffArt {
+  flex-shrink: 1;
+  /* height: 100px; */
+  /* width: max-width; */
+}
