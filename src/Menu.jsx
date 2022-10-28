@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 function Menu() {
   const [ modalNum, setModalNum ] = useState(1)
+  const [ modalClass, setModalClass ] = useState('Modal-Hide')
   const pokedexStart = 1 
   const pokedexEnd = 151 
   let pokedex = []
@@ -18,13 +19,22 @@ function Menu() {
         {
           pokedex.map((pokemon, index) => {
             return (
-              <button onClick={() => setModalNum(pokemon)} key={index}>
+              <button 
+                onClick={() => {
+                  return (
+                    setModalNum(pokemon),
+                    setModalClass('Modal-Show')
+                  )
+                }
+                  
+                } 
+                key={index}>
                 <Sprite pokedexNum={pokemon}/>
               </button>
             )
           })
         }
-        <Modal pokedexNum={modalNum}/>
+        <Modal pokedexNum={modalNum} viewClass={modalClass}/>
       </div>
 
     </div>

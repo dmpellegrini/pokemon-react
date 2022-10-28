@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react'
 
 function Modal(props) {
   const [ pokeBio, setPokeBio ] = useState('')
-  const { pokedexNum } = props
+  const { pokedexNum, viewClass } = props
+  const [ className, setClassName ] = useState('')
   const pokemonURL = `https://pokeapi.co/api/v2/pokemon/${pokedexNum}`
   const speciesURL = `https://pokeapi.co/api/v2/pokemon-species/${pokedexNum}`
   const bioPokemon = async function () {
@@ -23,15 +24,24 @@ function Modal(props) {
       habitatName,
       // evolution,
     })
+    setClassName(viewClass)
   }
 
-  useEffect(() => {bioPokemon()},[pokeBio]) 
+  const hideModal = function () {
+    setClassName("Modal-Hide")
+  }
+
+  useEffect(() => {
+    bioPokemon()
+  },[pokedexNum]) 
+  
   return (
-    <div className='Modal'>
+    <div className={className}>
     <div id='ArtContainer'>
       <img id='OffArt' src={pokeBio.offArt} alt=''/>
     </div>
       <div className='BioBox'>
+        <button onClick={() => hideModal()}>Exit</button>
         <ul>
           <li>Name: {pokeBio.name}</li>
           <li>Pokedex #: {pokeBio.id}</li>

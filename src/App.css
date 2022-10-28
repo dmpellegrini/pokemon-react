@@ -11,36 +11,35 @@ li {
   justify-content: center;
 }
 
-.Menu {
+.SpriteContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  outline: solid red;
 }
 
 .Sprite {
-  outline: solid red;
-  /* margin: 5px; */
 }
 
-.Modal {
-  background-color: grey;
+.Modal-Show {
+  background-color: white;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  outline: solid red;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.Modal-Hide {
+  display: none;
 }
 
 .BioBox {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  outline: solid red;
 }
 
 #ArtContainer {
